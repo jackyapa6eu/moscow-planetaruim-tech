@@ -10,9 +10,12 @@ const initialState: authState = {
   user: {
     id: null,
     email: null,
-    firstName: undefined,
-    lastName: null,
+    first_name: undefined,
+    last_name: null,
     profile_picture: undefined,
+    position: undefined,
+    phone_number: undefined,
+    tg_username: undefined
   },
   modal: {
     isOpen: false,
@@ -38,9 +41,12 @@ export const authSlice = createSlice({
       state.user = {
         id: null,
         email: null,
-        firstName: undefined,
-        lastName: null,
+        first_name: undefined,
+        last_name: null,
         profile_picture: undefined,
+        position: undefined,
+        phone_number: undefined,
+        tg_username: undefined
       }
     },
     openAuthModal: (state) => {

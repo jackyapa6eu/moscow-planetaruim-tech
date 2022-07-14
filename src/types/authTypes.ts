@@ -18,9 +18,12 @@ export interface authStatus {
 export interface user {
   id: string | null;
   email: string | null;
-  firstName: string | undefined;
-  lastName: string | null;
+  first_name: string | undefined;
+  last_name: string | null;
   profile_picture: string | undefined;
+  position: string | undefined,
+  phone_number: string | undefined,
+  tg_username: string | undefined
 }
 
 export interface LoginFormFields {
