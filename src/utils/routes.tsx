@@ -1,3 +1,4 @@
 export const routes = {
-  main: '/'
+  main: '/',
+  translation: '/translation'
 }
