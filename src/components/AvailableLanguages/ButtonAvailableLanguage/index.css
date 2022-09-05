@@ -1,0 +1,42 @@
+.available-languages__button {
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0;
+    outline: none;
+    background: none;
+    box-shadow: 0 0 5px wheat;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: 2px solid #202124;
+    box-sizing: border-box;
+}
+
+.available-languages__button_active {
+    background: wheat;
+    color: #202124;
+    box-shadow: 0 0 5px wheat, 0 0 10px #202124 inset;
+    animation: 1s linear 1s infinite alternate pulsing;
+}
+
+.available-languages__button:hover {
+    box-shadow: 0 0 2px wheat, 0 0 5px wheat inset;
+}
+
+.available-languages__button_active:hover {
+    color: black;
+    background: grey;
+    cursor: not-allowed;
+    border: 2px solid #202124;
+}
+
+@keyframes pulsing {
+    from {
+        box-shadow: 0 0 5px wheat, 0 0 10px #202124 inset;
+    }
+
+    to {
+        box-shadow: 0 0 15px wheat, 0 0 0px #202124 inset;
+    }
+}

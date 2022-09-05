@@ -1,0 +1,18 @@
+.available-languages {
+    display: grid;
+    width: 100%;
+    margin-bottom: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 30px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .available-languages {
+        width: 95%;
+    }
+}

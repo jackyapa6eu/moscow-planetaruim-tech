@@ -1,0 +1,89 @@
+
+.translation-main-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #202124;
+    color: wheat;
+}
+
+.audio-player {
+    width: 100%;
+}
+
+.translation-main-container__info-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-play {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.button-play_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.button-do-nothing {
+    position: absolute;
+    left: -500px;
+    top: -500px;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.button-control {
+    outline: none;
+    border: none;
+    background-color: #2f54eb;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.button-control_type_play {
+    width: 70px;
+    height: 70px;
+    background-image: url("../../images/button-play.png");
+    margin-bottom: 15px;
+    background-color: #004000;
+    border: solid 3px #202124;
+    box-shadow: 0 0 10px #00a900;
+    background-size: 35px;
+}
+
+.button-control_type_pause {
+    width: 40px;
+    height: 40px;
+    background-image: url("../../images/button-pause.png");
+    background-color: #840000;;
+    border: solid 3px #202124;
+    box-shadow: 0 0 10px #d90000;
+    background-size: 20px;
+}
+
+.button-control_type_play:hover {
+    box-shadow: 0 0 4px #00a900, 0 0 10px #00a900 inset;
+}
+
+.button-control_type_pause:hover {
+    box-shadow: 0 0 4px #d90000, 0 0 10px #d90000 inset;
+}
