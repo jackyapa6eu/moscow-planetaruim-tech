@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import './App.css';
 import {Route, Switch} from "react-router-dom";
 import {routes} from "../../utils/routes";
@@ -7,8 +7,6 @@ import {closeAuthModal, login, logout, openAuthModal, setAuthModalVariant} from 
 import {selectAuthModalState, selectAuthStatus, userSelector} from "../../store/slices/auth/authSelectors";
 import {useSelector} from "react-redux";
 import {PageHeader, Button, Typography, Modal, Form, Input} from "antd";
-import { io } from "socket.io-client";
-import {isIOS, isMobile} from 'react-device-detect';
 import {AudioPlayer} from "../AudioPlayer/AudioPlayer";
 
 const { Text } = Typography;
@@ -19,7 +17,6 @@ function App() {
   const { isLogged } = useSelector(selectAuthStatus);
   const { isOpen, variant } = useSelector(selectAuthModalState);
 
-  const [audio, setAudio] = useState<any>(new Audio());
 
   function handleLoginClick() {
     dispatch(openAuthModal())
@@ -62,7 +59,7 @@ function App() {
         ghost={true}
       />
       <main className="main">
-        <Modal title={'Регистрация'} visible={isOpen && variant === 'register'} footer={false} centered={true} onCancel={handleCloseModal}>
+        <Modal title="Регистрация" visible={isOpen && variant === 'register'} footer={false} centered={true} onCancel={handleCloseModal}>
           <Form
             name="basic"
             size={"small"}
